@@ -1,4 +1,4 @@
-html, body {
-  height: 100%;
-  width: 100%;
+html, body { /* mengatur elemen html dan body secara bersamaan*/
+  height: 100%; /* mengatur tinggi html dan body menjadi 100% dari tinggi area yang tersedia */
+  width: 100%; /* mengatur lebar html dan body menjadi 100% dari tinggi area yang tersedia */
 }
