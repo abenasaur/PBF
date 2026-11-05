@@ -4,27 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hello World</title>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script> <!-- mengambil library React versi 18 dari internet agar dapat digunakan dalam program -->
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- mengambil library ReactDOM yang digunakan untuk menampilkan komponen React ke dalam HTML -->
 
   <!-- Don't use this in production: -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- mengambil library Babel untuk mengubah kode JSX agar dapat dipahami oleh browser -->
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root"></div> <!-- membuat elemen div dengan id "root" sebagai tempat untuk menampilkan React -->
   <script type="text/babel">
-
+    // membuka bagian JavaScript dengan tipe text/babel agar kode JSX dapat diproses oleh babel 
+    
     function MyApp() {
-      return <h1>Hello, world!</h1>;
+      return <h1>Hello, world!</h1>; // mengembalikan elemen HTML h1 yang menampilkan teks "Hello, World!" ketika komponen dipanggil
     }
 
-    const container = document.getElementById('root');
-    const root = ReactDOM.createRoot(container);
-    root.render(<MyApp />);
+    const container = document.getElementById('root'); // membuat variabel "container" untuk mengambil elemen HTML yang memiliki id "root"
+    const root = ReactDOM.createRoot(container); // membuat variabel "root" untuk membuat root React pada elemen HTML yang sebelumnya disimpan dalam variabel
+    root.render(<MyApp />); // menampilkan komponenen React bernama "MyApp" ke dalam elemen HTML dengan id "root"
 
   </script>
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> <!-- menngabil script Replit untuk menampilkan badge Replit berwarna biru -->
 </body>
 
 </html>
