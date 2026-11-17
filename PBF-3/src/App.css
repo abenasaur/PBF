@@ -1,11 +1,13 @@
-main {
-  text-align: center;
-  vertical-align: center;
+/* selector main untuk menargetkan element <main> */
+main { 
+  text-align: center; /* untuk meratakan text ke tengah */
+  vertical-align: center; /* untuk mengatur perataan vertika ke tengah */
 }
 
+/* selector header untuk menargetkan element <header> */
 header {
-  background-color: blueviolet;
-  color: white;
-  padding: 10px;
-  font-family: Lato, sans-serif;
+  background-color: blueviolet; /* mengatur warna later belakang  */
+  color: white; /* mengatur warna teks */
+  padding: 10px;  /* mengatur jarak dalam keempat sisi antra teks dan tepi header */
+  font-family: Lato, sans-serif; /* mengatur jenis font yang ingin digunakan */
 }
