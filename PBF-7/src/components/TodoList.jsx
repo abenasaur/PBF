@@ -7,18 +7,18 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-const TodoList = ({ todos, deleteTodo }) => (
+const TodoList = ({ todos, deleteTodo }) => ( // Komponen daftar todo; menerima todos (array) dan deleteTodo (fungsi) dari induk
   <div>
 
-    <List>
-      {todos.map((todo, index) => (
+    <List> {/* Wadah daftar dari Material UI */}
+      {todos.map((todo, index) => ( 
         <ListItem key={index.toString()} dense button>
           <Checkbox tabIndex={-1} disableRipple />
           <ListItemText secondary={todo} />
           <ListItemSecondaryAction>
             <IconButton
               aria-label="Delete"
-              onClick={() => {
+              onClick={() => { // Saat diklik, panggil deleteTodo dengan index todo ini
                 deleteTodo(index);
               }}
             >
