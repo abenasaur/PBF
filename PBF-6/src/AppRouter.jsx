@@ -1,12 +1,12 @@
 import React from "react";
-import {
+import { // Mengimpor komponen routing dari react-router-dom
   BrowserRouter,
   Routes,
   Route,
   Link,
 } from "react-router-dom";
 
-export default function AppRouter() {
+export default function AppRouter() { // Komponen utama aplikasi dengan routing, diekspor sebagai default
   return (
     <BrowserRouter>
       <div>
@@ -38,15 +38,15 @@ export default function AppRouter() {
 }
 
 
-function Beranda() {
+function Beranda() { // Halaman Beranda
   return <h2>Beranda</h2>;
 }
 
-function Berita() {
+function Berita() { // Halaman Berita
   return <h2>Berita</h2>;
 }
 
-function Tentang() {
+function Tentang() { // Halaman Tentang
   return (
     <div>
       <h2>Tentang</h2>
@@ -56,7 +56,7 @@ function Tentang() {
   );
 }
 
-function Profile() {
+function Profile() { // Halaman Profile dengan navigasi dan route turunan sendiri
   return (
     <div>
       <nav>
@@ -73,7 +73,7 @@ function Profile() {
   );
 }
 
-function CV() {
+function CV() { // Sub-halaman CV
   return (
     <div>
       <h3>Nama Lengkap: isi Nama Anda</h3>
@@ -83,7 +83,7 @@ function CV() {
   )
 }
 
-function Contact() {
+function Contact() { // Sub-halaman Contact
   return (
     <div>
       <h3>Email: email anda</h3>
