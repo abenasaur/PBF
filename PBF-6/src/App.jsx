@@ -2,23 +2,23 @@ import './App.css'
 import axios from 'axios'
 import React from 'react'
 
-export default function App() {
+export default function App() { // Komponen utama App, diekspor sebagai default
 
-  const [isLoading, setLoading] = React.useState(false);
-  const [photos, setPhotos] = React.useState([])
+  const [isLoading, setLoading] = React.useState(false); // isLoading = status sedang memuat data, awalnya false
+  const [photos, setPhotos] = React.useState([]) // photos = daftar foto dari API, awalnya array kosong
 
-  async function loadPhotos() {
-    setLoading(true)
-    const response = await axios.get('https://jsonplaceholder.typicode.com/albums/1/photos')
-    setPhotos(response.data);
-    setLoading(false)
+  async function loadPhotos() { // Fungsi async untuk mengambil data foto dari API
+    setLoading(true) // Menandai bahwa proses loading dimulai
+    const response = await axios.get('https://jsonplaceholder.typicode.com/albums/1/photos') // Mengirim request GET ke API dan menunggu responsnya
+    setPhotos(response.data); // Menyimpan data foto dari respons ke state
+    setLoading(false) // Menandai bahwa proses loading selesai
   }
 
-  React.useEffect(() => {
+  React.useEffect(() => { // useEffect: menjalankan kode setelah komponen pertama kali tampil
     loadPhotos().then()
   }, [])
 
-  if (isLoading) return <h3>Loading...</h3>
+  if (isLoading) return <h3>Loading...</h3> // Jika sedang loading, tampilkan teks "Loading..." saja
 
   return (
     <main>
@@ -29,7 +29,7 @@ export default function App() {
 }
 
 
-function PhotoList({ photos }) {
+function PhotoList({ photos }) { // Komponen PhotoList; menerima props photos lewat destructuring
   return (
     <div>
       <div className="row">
