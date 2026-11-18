@@ -4,8 +4,10 @@ import AppState from './AppState'
 import AppEffect from './AppEffect'
 import AppCustomHook from './AppCustomHook'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// Mencari elemen <div id="root"> di index.html sebagai tempat aplikasi dipasang
+ReactDOM.createRoot(document.getElementById('root')).render( 
+  // StrictMode: mode pengembangan yang membantu mendeteksi masalah di komponen
   <React.StrictMode>
-    <AppCustomHook />
+    <AppCustomHook /> {/* Komponen yang saat ini ditampilkan di browser */}
   </React.StrictMode>
 )
